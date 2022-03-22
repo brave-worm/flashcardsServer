@@ -1,0 +1,226 @@
+GET http://localhost:3001/api/
+
+
+###
+GET http://localhost:3001/api/userInfo
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjo0LCJlbWFpbCI6InVzZXI1QHRlc3QuY29tIn0sImlhdCI6MTY0Nzk3MzY5MiwiZXhwIjoxNjQ4MDYwMDkyfQ.cikXArmLG16B5dvObyPjFl72o9wzcRdVT4ni97JPCrE
+
+###
+POST  http://localhost:3001/api/auth/registration
+content-type: application/json
+
+{
+    "email": "user5@test.com",
+    "password": "test1"
+}
+
+###
+POST http://localhost:3001/api/auth/login
+content-type: application/json
+
+{
+    "email": "user5@test.com",
+    "password": "test1"
+}
+
+
+###
+POST  http://localhost:3001/api/isEmailFree
+content-type: application/json
+
+{
+    "email": "user1@test.com" 
+}
+
+###
+GET  http://localhost:3001/api/profiles 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjo0LCJlbWFpbCI6InVzZXI1QHRlc3QuY29tIn0sImlhdCI6MTY0Nzk3MzY5MiwiZXhwIjoxNjQ4MDYwMDkyfQ.cikXArmLG16B5dvObyPjFl72o9wzcRdVT4ni97JPCrE
+
+
+###
+PUT  http://localhost:3001/api/profiles
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjo0LCJlbWFpbCI6InVzZXI1QHRlc3QuY29tIn0sImlhdCI6MTY0Nzk3MzY5MiwiZXhwIjoxNjQ4MDYwMDkyfQ.cikXArmLG16B5dvObyPjFl72o9wzcRdVT4ni97JPCrE
+content-type: application/json
+
+{
+    "name": "name3",
+    "description": "description3"
+}
+
+###
+POST   http://localhost:3001/api/sets/allUserSets
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjo0LCJlbWFpbCI6InVzZXI1QHRlc3QuY29tIn0sImlhdCI6MTY0Nzk3MzY5MiwiZXhwIjoxNjQ4MDYwMDkyfQ.cikXArmLG16B5dvObyPjFl72o9wzcRdVT4ni97JPCrE
+
+###
+GET   http://localhost:3001/api/sets/set
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjo0LCJlbWFpbCI6InVzZXI1QHRlc3QuY29tIn0sImlhdCI6MTY0Nzk3MzY5MiwiZXhwIjoxNjQ4MDYwMDkyfQ.cikXArmLG16B5dvObyPjFl72o9wzcRdVT4ni97JPCrE
+content-type: application/json
+
+{
+    "id": 3
+}
+
+###
+POST   http://localhost:3001/api/sets/set
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjo0LCJlbWFpbCI6InVzZXI1QHRlc3QuY29tIn0sImlhdCI6MTY0Nzk3MzY5MiwiZXhwIjoxNjQ4MDYwMDkyfQ.cikXArmLG16B5dvObyPjFl72o9wzcRdVT4ni97JPCrE
+content-type: application/json
+
+{
+    "id": 8,
+    "setTitle": "setTitle3",
+    "setDescription": null,
+    "setPortion": null
+}
+
+###
+Post   http://localhost:3001/api/sets/set
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoxLCJlbWFpbCI6InVzZXIxQHRlc3QuY29tIn0sImlhdCI6MTYzOTY2NDY5MiwiZXhwIjoxNjM5NzUxMDkyfQ.YJtgHtiJ1lB-QgKEpAMiUjo8rjGGvtRcZlrd0kScClw
+content-type: application/json
+
+{
+    "setTitle": "setTitle12",
+    "setDescription": null
+}
+
+###
+Post   http://localhost:3001/api/sets/setFlashcards
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjozLCJlbWFpbCI6InVzZXIzQHRlc3QuY29tIn0sImlhdCI6MTYzOTY2MTc1MSwiZXhwIjoxNjM5NzQ4MTUxfQ.Uirb2obAlOmBOWlThAkev6WfgA2gMTRNgNOWfwcJDfE
+content-type: application/json
+
+{
+    "email": "user3@test.com",
+    "setTitle": "setTitle9",
+    "setDescription": null,
+    "setPortion": null,
+    "Flashcards":[
+        {
+            "front": "frontAA1",
+            "back": "backAA1"
+        },
+        {
+            "front": "frontBB2",
+            "back": "backB"
+        },
+        {
+            "front": "frontCC3",
+            "back": "backC"
+        }
+    ]
+
+}
+
+
+###
+Post   http://localhost:3001/api/sets/setFlashcards
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjozLCJlbWFpbCI6InVzZXIzQHRlc3QuY29tIn0sImlhdCI6MTYzOTk0NjA3MywiZXhwIjoxNjQwMDMyNDczfQ.zUcJb-bduLlKzZ6ocDOSq-e3AcCmZdavxNY3GM0sceI
+content-type: application/json
+
+{
+    "email": "user3@test.com",
+    "setTitle": "setTitle9",
+    "setDescription": null,
+    "setPortion": null,
+    "Flashcards":[
+        {
+            "front": "frontAA12",
+            "back": "backAA12"
+        },
+        {
+            "front": "frontBB2",
+            "back": "backB"
+        },
+        {
+            "front": "frontCC3",
+            "back": "backC"
+        }
+    ]
+
+}
+
+
+###
+POST   http://localhost:3001/api/flashcards/flashcardsToLearn
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjozLCJlbWFpbCI6InVzZXIzQHRlc3QuY29tIn0sImlhdCI6MTYzODkxOTg4NiwiZXhwIjoxNjM5MDA2Mjg2fQ.rRPnh-chArIlOEJFYWdN5f7tgAZn8cfeQxklkxQWODQ
+content-type: application/json
+
+{
+    "email": "user3@test.com",
+    "set_id": 8
+
+}
+
+
+
+###
+POST   http://localhost:3001/api/flashcards/flashcardPlusOrZero
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjozLCJlbWFpbCI6InVzZXIzQHRlc3QuY29tIn0sImlhdCI6MTYzODg4MzI5NCwiZXhwIjoxNjM4OTY5Njk0fQ.5L7wIDLnn1Hg543ZRiyDuRMXL6UV7m_BokbsVjQGpLQ
+content-type: application/json
+
+{
+    "flashcardId": 20,
+    "ifCorrect": true
+}
+
+
+###
+DELETE   http://localhost:3001/api/sets/setFlashcardsDelete/7
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjozLCJlbWFpbCI6InVzZXIzQHRlc3QuY29tIn0sImlhdCI6MTYzODg4MzI5NCwiZXhwIjoxNjM4OTY5Njk0fQ.5L7wIDLnn1Hg543ZRiyDuRMXL6UV7m_BokbsVjQGpLQ
+
+###
+POST http://localhost:3001/api/profiles/name
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjozLCJlbWFpbCI6InVzZXIzQHRlc3QuY29tIn0sImlhdCI6MTYzOTY2MTc1MSwiZXhwIjoxNjM5NzQ4MTUxfQ.Uirb2obAlOmBOWlThAkev6WfgA2gMTRNgNOWfwcJDfE
+content-type: application/json
+
+{
+    "name": "name1"
+}
+
+
+
+###
+POST http://localhost:3001/api/profiles/description
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjozLCJlbWFpbCI6InVzZXIzQHRlc3QuY29tIn0sImlhdCI6MTYzOTY2MTc1MSwiZXhwIjoxNjM5NzQ4MTUxfQ.Uirb2obAlOmBOWlThAkev6WfgA2gMTRNgNOWfwcJDfE
+content-type: application/json
+
+{
+    "description": "description1"
+}
+
+###
+POST http://localhost:3001/api/auth/password
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoxLCJlbWFpbCI6InVzZXIxQHRlc3QuY29tIn0sImlhdCI6MTYzOTg3Mjg1NSwiZXhwIjoxNjM5OTU5MjU1fQ.sLwTd4u2tO0QPWnOSGU3KYCdRWUYo014ojuOa1qSpG8
+content-type: application/json
+
+{
+    "oldPassword": "user1password",
+    "newPassword": "user1password"
+}
+
+###
+POST http://localhost:3001/api/auth/login
+content-type: application/json
+
+{
+    "email": "user3@test.com",
+    "password": "user3password"
+}
+
+###
+GET   http://localhost:3001/api/sets/setStatistics/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoxLCJlbWFpbCI6InVzZXIxQHRlc3QuY29tIn0sImlhdCI6MTYzOTkzNTM4NCwiZXhwIjoxNjQwMDIxNzg0fQ.NogzrykGg-U3ZkqAmyYfYu2MIthxuwLFo6Gt_GVmTuo
+
+###
+PUT   http://localhost:3001/api/sets/setReset/11
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoxLCJlbWFpbCI6InVzZXIxQHRlc3QuY29tIn0sImlhdCI6MTYzOTY5MDEzNSwiZXhwIjoxNjM5Nzc2NTM1fQ.U8YGC4jiwPuYM3irGBp1tpA4Z5VaixX9U5G5Sik-Ua0
+
+###
+GET http://localhost:3001/api/profiles/statistics
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoxLCJlbWFpbCI6InVzZXIxQHRlc3QuY29tIn0sImlhdCI6MTYzOTgyOTcxNCwiZXhwIjoxNjM5OTE2MTE0fQ.VihRiO-4w9ZYIhUL3DOonA0bc-JbSE5zIPiwM71QB10
+
+###
+GET http://localhost:3001/api/profiles/statisticsSingle/0
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoxLCJlbWFpbCI6InVzZXIxQHRlc3QuY29tIn0sImlhdCI6MTYzOTgyOTcxNCwiZXhwIjoxNjM5OTE2MTE0fQ.VihRiO-4w9ZYIhUL3DOonA0bc-JbSE5zIPiwM71QB10
+
+###
+GET http://localhost:3001/api/profiles/statisticsBetween/0/5
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoxLCJlbWFpbCI6InVzZXIxQHRlc3QuY29tIn0sImlhdCI6MTYzOTgyOTcxNCwiZXhwIjoxNjM5OTE2MTE0fQ.VihRiO-4w9ZYIhUL3DOonA0bc-JbSE5zIPiwM71QB10
